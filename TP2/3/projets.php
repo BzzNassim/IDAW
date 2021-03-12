@@ -8,23 +8,26 @@
   </head>
   <body>
       <div class="page">
-      <div class="header">
-        <h1>Mes projets</h1>
-      </div>
+      <?php
+require_once('template_header.php');
+?>
       <div class="sidebar">
         <nav class="menu">
         <h2>Navigation</h2>
         <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a id="currentpage" href="projets.html">Projets</a></li>
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="cv.php">CV</a></li>
+        <li><a id="currentpage" href="projets.php">Projets</a></li>
         </ul>
     </nav>
   </div>
       <div class="content">
+      <h1>Mes projets</h1>
         <p>Liste de mes projets :</p>
       </div>
-      <div class="footer">Réalisé en HTML et CSS par Nassim BOUAZIZ</div>
+     <?php
+require_once('template_footer.php');
+?>
     </div>
   </body>
 </html>
