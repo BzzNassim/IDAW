@@ -10,9 +10,10 @@
     <?php
 require_once('template_header.php');
 ?>
-    <?php
-require_once('template_menu.php');
-?> 
+     <?php
+      require_once('template_menu.php');
+      renderMenuToHTML('cv');
+      ?>
     <div class="content">
     <h1>CV</h1>
     <img src="img/pdpfb.png" alt="Photo CV" />

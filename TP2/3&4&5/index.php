@@ -7,24 +7,26 @@
 
   </head>
   <body>
-  <?php
-require_once('template_header.php');
-?>
+
 
     <div class="page">
   
     <?php
-require_once('template_header.php');
-?>
-    <?php
-require_once('template_menu.php');
-?>
+    require_once('template_header.php');
+    ?>
+    
+      <?php
+      require_once('template_menu.php');
+      renderMenuToHTML('index');
+      ?>
+    
     <div class="content">
       <p>Bienvenue sur mon site pro</p>
     </div>
-    <?php
-require_once('template_footer.php');
-?>  </div>
+      <?php
+      require_once('template_footer.php');
+      ?>
+    </div>
     
     
   </body>
