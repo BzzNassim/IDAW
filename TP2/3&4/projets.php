@@ -11,16 +11,9 @@
       <?php
 require_once('template_header.php');
 ?>
-      <div class="sidebar">
-        <nav class="menu">
-        <h2>Navigation</h2>
-        <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="cv.php">CV</a></li>
-        <li><a id="currentpage" href="projets.php">Projets</a></li>
-        </ul>
-    </nav>
-  </div>
+      <?php
+require_once('template_menu.php');
+?>
       <div class="content">
       <h1>Mes projets</h1>
         <p>Liste de mes projets :</p>

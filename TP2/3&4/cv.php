@@ -10,15 +10,9 @@
     <?php
 require_once('template_header.php');
 ?>
-    <div class="sidebar">
-    <nav class="menu">
-      <ul>
-      <li><a href="index.php">Accueil</a></li>
-      <li><a id="currentpage" href="cv.php">CV</a></li>
-      <li><a href="projets.php">Projets</a></li>
-      </ul>
-    </nav>
-    </div> 
+    <?php
+require_once('template_menu.php');
+?> 
     <div class="content">
     <h1>CV</h1>
     <img src="img/pdpfb.png" alt="Photo CV" />
@@ -47,7 +41,8 @@ require_once('template_header.php');
   </div>
   <?php
 require_once('template_footer.php');
-?></div>
+?>
+</div>
   
   </body>
 </html>

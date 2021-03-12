@@ -16,16 +16,9 @@ require_once('template_header.php');
     <?php
 require_once('template_header.php');
 ?>
-    <div class="sidebar">
-      <nav class="menu">
-      <h2>Navigation</h2>
-      <ul>
-      <li><a id="currentpage" href="index.php">Accueil</a></li>
-      <li><a href="cv.php">CV</a></li>
-      <li><a href="projets.php">Projets</a></li>
-      </ul>
-  </nav>
-</div>
+    <?php
+require_once('template_menu.php');
+?>
     <div class="content">
       <p>Bienvenue sur mon site pro</p>
     </div>
