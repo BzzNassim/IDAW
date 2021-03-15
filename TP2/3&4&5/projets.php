@@ -9,6 +9,7 @@
   <body>
       <div class="page">
       <?php
+      require_once('template_header.php');
       require_once('template_menu.php');
       renderMenuToHTML('projets');
       ?>

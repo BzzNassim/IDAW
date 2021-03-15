@@ -1,0 +1,39 @@
+.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #EEE;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+#currentpage {
+    background-color: red;
+}
+
+.sidebar{
+    width: 25%;
+    background-color: #bdc5ff;
+}
+.content{
+    width: 75%;
+    background-color: #ffcabc;
+
+    
+}
+.footer{
+    width: 100%;
+    height: 60px;
+    background-color: #EEE; 
+    display: flex;
+
+    justify-content: center;
+}
