@@ -68,11 +68,58 @@
             </div>
         </form>
         <script>
+        let students =[];
+        let studentMaxId=0;
+        let IdEdited=-1;
+
+        function edit(id){
+            let studentToEdit=student[id];
+            formValue(
+                studentToEdit.nom,
+                studentToEdit.prenom,
+                studentToEdit.date,
+                studentToEdit.check,
+                studentToEdit.remarques);
+            IdEdited=id;
+        }
+
         function onFormSubmit() {
-        // prevent the form to be sent to the server
-        event.preventDefault();
-        let nom = $("#inputNom").val();
-        $("#studentsTableBody").append(`<tr><td>${nom}</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>`);
+            // prevent the form to be sent to the server
+            event.preventDefault();
+            let newStudent={};
+            newStudent.nom = $("#inputNom").val();
+            newStudent.prenom = $("#inputPrenom").val();
+            newStudent.date = $("#inputDate").val();
+            newStudent.remarques = $("#inputRemarques").val();
+            newStudent.check=$("#inputCheck").prop("checked") ? "oui" : "non";
+            if(newStudent.nom!=''){
+                if(IdEdited>=0){
+                    newStudent.id=IdEdited;
+                    students[newStudent.id]=newStudent;
+                    $("#student-"+newStudent.id).empty();
+                    $("#student-"+newStudent.id).append(`<td>${newStudent.nom}</td>
+                        <td>${newStudent.prenom}</td>
+                        <td>${newStudent.date}</td>
+                        <td>${newStudent.check}</td>
+                        <td>${newStudent.remarques}</td>
+                        <td><button onclick="edit(${newStudent.id});">Edit</button></td>`);
+                    IdEdited=-1;
+                }
+                else{
+                    newStudent.id=studentMaxId;
+                    studentMaxId++;
+                    students.push(newStudent);
+                    $("#studentsTableBody").append(`<tr id="student-${newStudent.id}"><td>${newStudent.nom}</td>
+                    <td>${newStudent.prenom}</td>
+                    <td>${newStudent.date}</td>
+                    <td>${newStudent.check}</td>
+                    <td>${newStudent.remarques}</td>
+                    <td><button onclick="edit(${newStudent.id});">Edit</button></td>
+                    </tr>`);
+                    formValue("","","","","");
+                }
+
+            }
         }
         </script>
     </body>
